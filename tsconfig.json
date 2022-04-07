@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["dom", "es2019"],
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "components/*": ["components/*"],
+      "config/*": ["config/*"],
+      "queries/*": ["queries/*"],
+      "styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "dist",
+    "node_modules",
+  ],
+}
