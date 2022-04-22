@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import {
   Button as ThemeUiButton,
   ButtonProps as ThemeUiButtonProps,
-  Theme,
   useThemeUI,
 } from 'theme-ui';
 
@@ -13,7 +12,7 @@ const Button: FC<ButtonProps> = ({ onClick, children, ...props }) => {
   const { theme } = useThemeUI();
   return (
     <ButtonWrapper onClick={onClick} theme={theme} {...props}>
-      {children}
+      ={children}=
     </ButtonWrapper>
   );
 };
