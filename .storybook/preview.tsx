@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
-import { ThemeProvider } from 'theme-ui';
-import { DecoratorFn, Parameters } from '@storybook/react';
+import { Suspense } from 'react';
+import { DecoratorFn } from '@storybook/react';
+import { ThemeProvider } from "theme-ui";
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import './assets/bootstrap.min.css';
-import {ckomop0xTheme} from "../src/themes/ckomop0xTheme";
+import { ckomop0xTheme } from "../src";
 
 const themes = {
   Ckomop0x: ckomop0xTheme,
@@ -34,7 +34,7 @@ const withProviders: DecoratorFn = (Story, context) => {
   const theme = getTheme(context.globals.theme);
   return (
     <Suspense fallback="Loading...">
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={ckomop0xTheme}>
         <Story {...context} />
       </ThemeProvider>
     </Suspense>
