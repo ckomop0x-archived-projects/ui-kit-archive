@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import styled from '@emotion/styled';
 import React, { FC } from 'react';
 import {

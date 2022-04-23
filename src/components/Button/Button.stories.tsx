@@ -16,10 +16,10 @@ const Template: Story<ButtonProps> = args => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Primary',
-  variant: 'buttons.primary',
+  variant: 'primary',
 };
 export const Secondary = Template.bind({});
 Secondary.args = {
   children: 'Secondary',
-  variant: 'buttons.secondary',
+  variant: 'secondary',
 };
