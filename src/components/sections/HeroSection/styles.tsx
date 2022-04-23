@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Theme } from 'theme-ui';
 
 export const HeroSectionWrapper = styled.section<{
   backgroundImage?: string;
@@ -39,7 +40,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.p`
   font-family: Neucha, Roboto, Helvetica, Arial, sans-serif;
-  color: ${({ theme }) => theme?.colors?.primary || '#fff'};
+  color: ${({ colors }: Theme) => colors?.primary || '#fff'};
   font-size: 20px;
   line-height: 32px;
   margin-top: 24px;
