@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import {
   Button as ThemeUiButton,
   ButtonProps as ThemeUiButtonProps,
-  useThemeUI,
 } from 'theme-ui';
 
 export interface ButtonProps extends ThemeUiButtonProps {
@@ -16,15 +15,11 @@ const Button: FC<ButtonProps> = ({
   onClick,
   children,
   ...props
-}) => {
-  const { theme } = useThemeUI();
-
-  return (
-    <ButtonWrapper variant={variant} onClick={onClick} {...props} sx={sx}>
-      {children}
-    </ButtonWrapper>
-  );
-};
+}) => (
+  <ButtonWrapper variant={variant} onClick={onClick} {...props} sx={sx}>
+    {children}
+  </ButtonWrapper>
+);
 
 export const ButtonWrapper = styled(ThemeUiButton)`
   transition: box-shadow 0.3s ease;
