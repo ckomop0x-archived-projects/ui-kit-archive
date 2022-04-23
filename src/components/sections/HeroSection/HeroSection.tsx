@@ -1,12 +1,8 @@
 import React, { FC } from 'react';
 
-import {
-  HeroSectionWrapper,
-  Title,
-  SubTitle,
-  HeroSectionText,
-  SubTitleThemed,
-} from './styles';
+import { HeroSectionWrapper, Title, SubTitle, HeroSectionText } from './styles';
+
+import Button from 'components/Button';
 
 export interface HeroSectionProps {
   title: string;
@@ -26,6 +22,7 @@ const HeroSection: FC<HeroSectionProps> = ({
       {nav}
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
+      <Button>Button</Button>
     </HeroSectionText>
   </HeroSectionWrapper>
 );

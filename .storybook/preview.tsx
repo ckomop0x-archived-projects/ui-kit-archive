@@ -34,7 +34,7 @@ const withProviders: DecoratorFn = (Story, context) => {
   const theme = getTheme(context.globals.theme);
   return (
     <Suspense fallback="Loading...">
-      <ThemeProvider theme={ckomop0xTheme}>
+      <ThemeProvider theme={theme}>
         <Story {...context} />
       </ThemeProvider>
     </Suspense>

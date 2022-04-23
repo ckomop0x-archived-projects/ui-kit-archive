@@ -3,19 +3,15 @@ import React, { FC } from 'react';
 import {
   Button as ThemeUiButton,
   ButtonProps as ThemeUiButtonProps,
-  useThemeUI,
 } from 'theme-ui';
 
 export type ButtonProps = ThemeUiButtonProps;
 
-const Button: FC<ButtonProps> = ({ onClick, children, ...props }) => {
-  const { theme } = useThemeUI();
-  return (
-    <ButtonWrapper onClick={onClick} theme={theme} {...props}>
-      ={children}=
-    </ButtonWrapper>
-  );
-};
+const Button: FC<ButtonProps> = ({ onClick, children, ...props }) => (
+  <ButtonWrapper onClick={onClick} {...props}>
+    {children}
+  </ButtonWrapper>
+);
 
 export const ButtonWrapper = styled(ThemeUiButton)`
   transition: box-shadow 0.3s ease;
