@@ -54,7 +54,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-storybook": "^0.5.11",
+    "eslint-plugin-storybook": "^0.6.11",
     "next": "^13.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
