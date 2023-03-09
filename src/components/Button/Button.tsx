@@ -1,31 +1,9 @@
-import styled from '@emotion/styled';
-import React, { FC } from 'react';
-import {
-  Button as ThemeUiButton,
-  ButtonProps as ThemeUiButtonProps,
-} from 'theme-ui';
+import { Button as UIButton, ButtonProps as UIButtonProps} from '@theme-ui/components'
+import { FC, PropsWithChildren } from 'react';
 
-export interface ButtonProps extends ThemeUiButtonProps {
-  variant?: string;
-}
+export interface ButtonProps extends UIButtonProps{}
 
-const Button: FC<ButtonProps> = ({
-  variant = 'primary',
-  sx,
-  onClick,
-  children,
-  ...props
-}) => (
-  <ButtonWrapper variant={variant} onClick={onClick} {...props} sx={sx}>
-    {children}
-  </ButtonWrapper>
-);
-
-export const ButtonWrapper = styled(ThemeUiButton)`
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0 2px 3px #0000001c;
-  border: 0;
-  padding: 10px 20px;
-`;
-
+const Button: FC<PropsWithChildren<ButtonProps>> = ({children, ...props}) => {
+  return <UIButton {...props}>{children}</UIButton>;
+};
 export default Button;
