@@ -1,6 +1,4 @@
-/** @jsxImportSource theme-ui */
-import * as React from "react";
-import { ChangeEventHandler } from "react"
+import { ChangeEventHandler } from 'react';
 
 export interface InputProps {
   label?: string;
@@ -9,18 +7,18 @@ export interface InputProps {
   placeholder?: string;
   paddding?: string;
   id?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-const Input = (props: InputProps) => {
-  return (
-    <div>
-      <label htmlFor={props.id ?? 'text'}>{props.label}</label>
-      <input type='text' id={props.id ?? 'text'}
-             disabled={props.disabled}
-             placeholder={props.placeholder}
-             sx={{ padding: !props.paddding && "4px", display: 'block' }} />;
-    </div>
-  );
-};
+const Input = (props: InputProps) => (
+  <div>
+    <label htmlFor={props.id ?? 'text'}>{props.label}</label>
+    <input
+      type="text"
+      id={props.id ?? 'text'}
+      disabled={props.disabled}
+      placeholder={props.placeholder}
+    />
+  </div>
+);
 export default Input;
